@@ -5,13 +5,12 @@ This project explores the impact of various optimization techniques on the perfo
 
 ## Training Instances and Optimization Techniques
 
-| Instance | Optimizer | Regularizer | Epochs | Early Stopping | Layers | Learning Rate | Accuracy | F1-Score |
-|----------|-----------|-------------|--------|----------------|---------|---------------|----------|-----------|
-| 1 | Adam | None | 50 | No | 3 | 0.001 | 0.5502 | 0.486 |
-| 2 | Nadam | L2+Dropout | 50 | Yes | 4 | 0.0005 | 0.5270 | 0.044 |
-| 3 | RMSprop | L1/L2 | 100 | Yes | 5 | 0.0001 | 0.5270 | 0.496 |
-| 4 | Nadam | None | 50 | No | 3 | 0.01 | 0.5270 | - |
-| 5 | Adam | Experimental | 75 | Yes | 4 | 0.0003 | 0.5270 | 0.493 |
+| Instance | Optimizer | Regularizer | Epochs | Early Stopping | Layers | Learning Rate | Accuracy | F1-Score | Recall | Precision
+|----------|-----------|-------------|--------|----------------|---------|---------------|----------|-----------|-----------|-----------|
+| 1 | Adam | None | 50 | No | 3 | 0.001 | 0.5502 | 0.486 | 0.547 | 0.520
+| 2 | Nadam | L2+Dropout | 50 | Yes | 4 | 0.0005 | 0.5270 | 0.044 | N/A
+| 3 | RMSprop | None | 100 | Yes | 5 | 0.0001 | 0.5270 | 0.496 | 0.541 | 0.509
+| 4 | Adam | Experimental | 75 | Yes | 4 | 0.0003 | 0.5270 | 0.493 | 0.552 | 0.532
 
 ## Summary of Results
 
