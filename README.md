@@ -14,6 +14,14 @@ The model implements different machine learning techniques, comparing their perf
 - **Medium Yield**: Suggests average production with potential for improvement
 - **Low Yield**: Signals need for intervention in farming practices or conditions
 
+# Project Resources
+
+## Video Presentation
+[Watch the video presentation on YouTube](https://www.youtube.com/watch?v=-CjEXIuyB2E)
+
+## Project Notebook
+[View the notebook on Google Colab](https://colab.research.google.com/github/lilika67/Intro_MLSummative/blob/main/Summative_Intro_to_ml_%5BKayitesi_Liliane%5D_assignment.ipynb)
+
 ## Training Instances and Optimization Techniques
 
 | Instance | Optimizer | Regularizer | Epochs | Early Stopping | Layers | Learning Rate | Accuracy | F1-Score | Recall | Precision |
@@ -24,6 +32,7 @@ The model implements different machine learning techniques, comparing their perf
 | 4 | Adam | Experimental | 75 | Yes | 4 | 0.0003 | 0.5270 | 0.493 | 0.552 | 0.532 |
 
 ## Getting Started
+
 
 ### Prerequisites
 * Python 3.8+
