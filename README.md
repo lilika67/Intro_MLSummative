@@ -9,13 +9,48 @@ This project explores the impact of various optimization techniques on the perfo
 |----------|-----------|-------------|--------|----------------|---------|---------------|----------|-----------|-----------|-----------|
 | 1 | Adam | None | 50 | No | 3 | 0.001 | 0.5502 | 0.486 | 0.547 | 0.520
 | 2 | Nadam | L2+Dropout | 50 | Yes | 4 | 0.0005 | 0.5270 | 0.044 | N/A
-| 3 | RMSprop | None | 100 | Yes | 5 | 0.0001 | 0.5270 | 0.496 | 0.541 | 0.509
+| 3 | RMSprop | L2/L1 | 100 | Yes | 5 | 0.0001 | 0.5270 | 0.496 | 0.541 | 0.509
 | 4 | Adam | Experimental | 75 | Yes | 4 | 0.0003 | 0.5270 | 0.493 | 0.552 | 0.532
+
+
+## Getting Started and Instructions for running the notebook and loading the best saved model.
+
+### Prerequisites
+* Python 3.8+
+* Jupyter Notebook
+* Required packages:
+  ```
+  pip install -r requirements.txt
+  ```
+
+### Running the Notebook
+1. Clone the repository:
+   ```bash
+   git clone (https://github.com/lilika67/Intro_MLSummative.git)
+   cd Intro_MLSummative
+   ```
+
+2. Start Jupyter Notebook:
+   ```bash
+   jupyter notebook
+   ```
+
+3. Open `Summative_Intro_to_ml_[Kayitesi_Liliane]_assignment.ipynb` and run all cells
+
+### Loading the Best Model
+The best performing model (Instance 1: Adam optimizer, 3 layers) can be loaded using:
+
+```python
+from tensorflow.keras.models import load_model
+
+# Load the saved model
+model = load_model('saved_models/agriculture_yield_bestmodel.keras')
+
 
 ## Summary of Results
 
 ### Best Performing Combination
-From the experiments, the combination of **Adam optimizer without regularization** (Instance 1) yielded the highest accuracy of 0.5502. While Instance 3 with **RMSprop and L1/L2 regularization** achieved the highest F1-score of 0.496, showing good balance between precision and recall. The use of a simpler model architecture (3 layers) with a moderate learning rate of 0.001 contributed to better model performance in Instance 1.
+From the results, the combination of **Adam optimizer without regularization** (Instance 1) yielded the highest accuracy of 0.5502. While Instance 3 with **RMSprop and L1/L2 regularization** achieved the highest F1-score of 0.496, showing good balance between precision and recall. The use of a simpler model architecture (3 layers) with a moderate learning rate of 0.001 contributed to better model performance in Instance 1.
 
 ### Comparison: Machine Learning Algorithm vs Neural Network
 Looking at the neural network configurations, models with **3 layers** (Instances 1 and 4) generally performed better in terms of accuracy compared to deeper architectures. However, the **5-layer network** with RMSprop and L1/L2 regularization showed strengths in achieving a balanced F1-score, suggesting better handling of class imbalance.
